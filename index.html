@@ -15,13 +15,11 @@
         .tab-active { border-bottom: 3px solid #b91c1c; color: #b91c1c; font-weight: bold; }
         .tab-inactive { border-bottom: 3px solid transparent; color: #6b7280; }
         
-        /* 텍스트 정렬 및 레이아웃 최적화 */
         .info-item { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 14px; }
         .info-icon { color: #b91c1c; flex-shrink: 0; margin-top: 4px; font-weight: bold; font-size: 0.95rem; }
         .info-text-wrapper { flex: 1; line-height: 1.7; }
-        .info-label { font-weight: 700; color: #1c1917; margin-right: 6px; }
+        .info-label { font-weight: 700; color: #1c1917; margin-right: 4px; }
 
-        /* 기획 제안 카드 스타일링 */
         .proposal-card { transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); border: 1px solid #3f3f46; background: rgba(30, 30, 35, 0.7); }
         .proposal-card:hover { border-color: #f59e0b; transform: translateY(-6px); box-shadow: 0 20px 40px -15px rgba(0,0,0,0.7); }
         .proposal-detail { display: none; overflow: hidden; border-top: 1px solid #3f3f46; margin-top: 24px; padding-top: 24px; }
@@ -38,11 +36,12 @@
 </head>
 <body class="bg-stone-50 text-stone-800 selection:bg-red-100 selection:text-red-900">
 
-    <!-- Chosen Palette: Stone, Crimson, Zinc (Dark) -->
+    <!-- Chosen Palette: Warm Neutrals, Crimson Red, Zinc Dark -->
     <!-- Application Structure Plan: 
-         1. Strategic Dashboard: Focus on data credibility (Methodology) and event peaks.
-         2. Comparative Insight: Radar chart and tabbed analysis for KR vs CN distinction.
-         3. Actionable Proposals: High-detail expandable cards with Planning Background, Mechanics, and BM strategies.
+         1. Executive Dashboard: Focused on data credibility (Methodology) and event peaks.
+         2. Comparative Insight: Tabbed analysis for KR vs CN positioning.
+         3. Actionable Proposals: High-depth expandable cards with Planning Background, Mechanics, and BM.
+         *Removed all markdown-style bold marks (**) for professional look.*
     -->
     <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
 
@@ -65,7 +64,7 @@
         <div class="inline-flex items-center gap-2 px-3 py-1 bg-red-700 text-white text-[10px] font-black rounded uppercase tracking-[0.2em] mb-6">Confidential Draft</div>
         <h1 class="text-4xl md:text-6xl font-extrabold text-stone-900 mb-8 tracking-tight leading-[1.1]">지하성과 용사: 기원<br><span class="text-red-700">라이브 서비스 데이터 분석 및 운영 제언</span></h1>
         <p class="text-xl text-stone-600 max-w-4xl leading-relaxed font-light">
-            본 보고서는 2025-2026년 중국 시장의 외부 지표를 정밀 모델링하여 도출되었습니다. <br class="hidden md:block">현지 유저의 '집단 경쟁' 심리를 자극하여 매출과 리텐션을 동시 확보하는 기획안을 포함합니다.
+            본 보고서는 2025-2026년 중국 시장의 외부 지표를 정밀 모델링하여 도출되었습니다. <br class="hidden md:block">현지 유저의 집단 경쟁 심리를 자극하여 매출과 리텐션을 동시 확보하는 기획안을 포함합니다.
         </p>
     </header>
 
@@ -100,7 +99,7 @@
                             <li>• <strong>Financials:</strong> 텐센트 IR 분기별 실적 및 게임 부문 가이드라인 분석</li>
                             <li>• <strong>Store Data:</strong> Qimai, Sensor Tower 기반 중국 iOS 매출 순위 가중치 산출</li>
                             <li>• <strong>Social Index:</strong> NGA, Bilibili 내 핵심 키워드 언급량 및 긍정 반응률 트래킹</li>
-                            <li class="pt-2 border-t border-red-200 italic">* 정확한 매출액은 대외비이므로 <strong>'성능 지표(Index)'</strong>를 활용한 상대 가치로 트렌드를 시각화함</li>
+                            <li class="pt-2 border-t border-red-200 italic">* 정확한 매출액은 대외비이므로 <strong>성능 지표(Index)</strong>를 활용한 상대 가치로 트렌드를 시각화함</li>
                         </ul>
                     </div>
                     <div class="p-6 bg-stone-50 rounded-2xl border border-stone-200">
@@ -123,7 +122,7 @@
             </div>
         </section>
 
-        <!-- 02. 비교 분석 -->
+        <!-- 02. 서버별 비교 -->
         <section id="section-comparison" class="grid grid-cols-1 lg:grid-cols-2 gap-12">
             <div class="bg-white rounded-3xl shadow-sm border border-stone-200 p-8 md:p-12">
                 <h2 class="text-2xl font-bold text-stone-900 mb-8">02. 서버별 운영/BM 포지셔닝</h2>
@@ -156,7 +155,7 @@
             </div>
         </section>
 
-        <!-- 03. 기획 제언 -->
+        <!-- 03. 라이브 기획 제언 -->
         <section id="section-proposals" class="bg-zinc-950 rounded-[2rem] p-8 md:p-16 relative overflow-hidden shadow-2xl">
             <div class="absolute -top-32 -right-32 w-[500px] h-[500px] bg-red-600/10 rounded-full blur-[120px]"></div>
             
@@ -188,7 +187,7 @@
                             <div class="bg-zinc-900/40 p-8 rounded-3xl border border-zinc-800/50">
                                 <h4 class="text-amber-500 font-black text-lg mb-5 flex items-center gap-2">기획 배경</h4>
                                 <p class="text-zinc-400 text-sm leading-relaxed">
-                                    현재 중국 시장 내 상위 길드 간의 소강상태를 타파하기 위한 **'집단적 명예욕'** 자극이 필요합니다. 개인의 과시를 넘어선 서버 단위의 소속감을 고취하여 신규 경쟁 동력을 확보합니다.
+                                    현재 중국 시장 내 상위 길드 간의 소강상태를 타파하기 위한 집단적 명예욕 자극이 필요합니다. 개인의 과시를 넘어선 서버 단위의 소속감을 고취하여 신규 경쟁 동력을 확보합니다.
                                 </p>
                             </div>
                             <div class="bg-zinc-900/40 p-8 rounded-3xl border border-zinc-800/50">
@@ -232,14 +231,14 @@
                             <div class="bg-zinc-900/40 p-8 rounded-3xl border border-zinc-800/50">
                                 <h4 class="text-red-500 font-black text-lg mb-5 flex items-center gap-2">기획 배경</h4>
                                 <p class="text-zinc-400 text-sm leading-relaxed">
-                                    중국 내 틱톡(Douyin) 및 비리비리 기반의 숏폼 트래픽을 인게임으로 직접 연동하여 **'보는 재미'**를 매출로 전환합니다. 스트리머와 팬덤의 상호작용을 공식화합니다.
+                                    중국 내 틱톡 및 비리비리 기반의 숏폼 트래픽을 인게임으로 직접 연동하여 보는 재미를 매출로 전환합니다. 스트리머와 팬덤의 상호작용을 공식화합니다.
                                 </p>
                             </div>
                             <div class="bg-zinc-900/40 p-8 rounded-3xl border border-zinc-800/50">
                                 <h4 class="text-red-500 font-black text-lg mb-5 flex items-center gap-2">핵심 메커니즘</h4>
                                 <ul class="text-zinc-400 text-sm space-y-4 leading-relaxed">
                                     <li>• <strong class="text-zinc-200">스피드런 레이스:</strong> 지정된 시간에 열리는 특수 타임어택 레이드 중계.</li>
-                                    <li>• <strong class="text-zinc-200">인게임 후원:</strong> 유료 재화로 '버프 꽃가루'를 구매하여 방송 중인 스트리머에게 투척.</li>
+                                    <li>• <strong class="text-zinc-200">인게임 후원:</strong> 유료 재화로 버프 꽃가루를 구매하여 방송 중인 스트리머에게 투척.</li>
                                     <li>• <strong class="text-zinc-200">참여 보상:</strong> 후원 유저에게는 해당 스트리머의 기록에 비례한 가챠 재화 페이백.</li>
                                 </ul>
                             </div>
@@ -258,11 +257,9 @@
         </section>
     </main>
 
-    <footer class="bg-zinc-950 py-20 border-t border-zinc-900">
-        <div class="max-w-6xl mx-auto px-4 text-center">
-            <p class="text-zinc-600 text-xs tracking-widest uppercase mb-4">Strategic Intelligence Report</p>
-            <p class="text-white font-black text-lg tracking-tight italic">지하성과 용사: 기원 &copy; 2026 Live Strategy Group.</p>
-        </div>
+    <footer class="bg-zinc-950 py-20 border-t border-zinc-900 text-center">
+        <p class="text-zinc-600 text-xs tracking-widest uppercase mb-4">Strategic Intelligence Report</p>
+        <p class="text-white font-black text-lg tracking-tight italic">지하성과 용사: 기원 &copy; 2026 Live Strategy Group.</p>
     </footer>
 
     <script>
@@ -274,16 +271,16 @@
                 title: "전체 흐름: 정기적인 대형 이벤트 중심의 계단식 매출 상승",
                 brief: "중국 서버는 춘절, 주년, 국경절 등 대형 연휴를 기점으로 매출 상한선을 수직 확장하는 계단식 성장 모델을 성공적으로 유지하고 있습니다.",
                 items: [
-                    ["전략 거시 흐름", "연간 4회의 핵심 과금 사이클(춘절-노동절-주년-국경절)을 통해 매출 피크를 형성하고 비수기에는 소셜 이벤트를 통해 리텐션을 방어하는 전략입니다."],
-                    ["성과 참여 지수", "대형 업데이트 평균 매출 지수(Index) 90 이상 유지 중이며, 각 시점마다 유저 참여도가 92%를 상회하는 높은 고착도를 보입니다."]
+                    ["전략 거시 흐름", "연간 4회의 핵심 과금 사이클을 통해 매출 피크를 형성하고 비수기에는 소셜 이벤트를 통해 리텐션을 방어하는 전략입니다."],
+                    ["성과 참여 지수", "대형 업데이트 평균 매출 지수 90 이상 유지 중이며, 각 시점마다 유저 참여도가 92%를 상회하는 높은 고착도를 보입니다."]
                 ]
             },
             spring: {
                 title: "25년 춘절: 패키지 천장 시스템과 길드 소셜의 결합",
-                brief: "전통적인 대목인 춘절에 '다중 마일리지'와 '길드 누적 보상'을 결합하여 고래 유저와 일반 유저의 참여를 동시에 극대화했습니다.",
+                brief: "전통적인 대목인 춘절에 다중 마일리지와 길드 누적 보상을 결합하여 고래 유저와 일반 유저의 참여를 동시에 극대화했습니다.",
                 items: [
                     ["참여 방식", "개인의 미니게임 기여도와 길드 전체의 누적 참여도를 연동하여, 소속감을 통한 접속 유도 및 이탈 방지를 꾀했습니다."],
-                    ["보상 구조", "확률형 히든 칭호에 10단계 천장(마일리지) 시스템을 도입하여, 고과금 유저의 확정적 명예 보상을 보장하는 BM을 전개했습니다."],
+                    ["보상 구조", "확률형 히든 칭호에 10단계 천장 시스템을 도입하여, 고과금 유저의 확정적 명예 보상을 보장하는 BM을 전개했습니다."],
                     ["경제 순환", "과금 유저가 구매한 패키지 부산물이 거래소에 풀리며 무소과금 유저의 재화 수급을 돕는 선순환 경제가 정점에 도달했습니다."]
                 ]
             },
@@ -291,9 +288,9 @@
                 title: "1주년 기념: 신규 클래스 출시와 고속 성장 지원",
                 brief: "서비스 1주년을 맞아 신규 캐릭터와 점핑 가이드를 통해 대규모 유입 및 복귀를 성공적으로 이끌어낸 사례입니다.",
                 items: [
-                    ["참여 방식", "신규/복귀 유저 전용 '정착 가이드' 미션을 배치하여, 단기간 내 최상위 콘텐츠 진입이 가능한 성장 가속화를 지원했습니다."],
+                    ["참여 방식", "신규/복귀 유저 전용 정착 가이드 미션을 배치하여, 단기간 내 최상위 콘텐츠 진입이 가능한 성장 가속화를 지원했습니다."],
                     ["보상 구조", "에픽 장비 선택권 및 강화 보존권을 대량 살포하여 장비 격차에 대한 심리적 허들을 제거하고, 한정 코스튬으로 명예욕을 자극했습니다."],
-                    ["성과 지표", "복귀 유저 잔존율(D+7)이 평소 대비 45% 상승하며 트래픽의 질적 성장을 확인했습니다."]
+                    ["성과 지표", "복귀 유저 잔존율이 평소 대비 45% 상승하며 트래픽의 질적 성장을 확인했습니다."]
                 ]
             }
         };
